@@ -33,7 +33,7 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+<script src="flutter_bootstrap.js" async></script>
   <!-- Firebase App (core) -->
 <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
 <!-- Firebase Auth -->
@@ -52,9 +52,18 @@
   };
 
   firebase.initializeApp(firebaseConfig);
+  async function loginWeb(email, password) {
+    try {
+      const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+      return { success: true, user: userCredential.user };
+    } catch (error) {
+      return { success: false, error: error.message };
+    }
+  }
 </script>
 </body>
 </html>
+
 
 
 
