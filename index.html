@@ -34,7 +34,27 @@
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
+  <!-- Firebase App (core) -->
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyC9nA1v76R3_m5AzCe032QvFTb9wG67XlM",
+    authDomain: "application-florian.firebaseapp.com",
+    projectId: "application-florian",
+    storageBucket: "application-florian.firebasestorage.app",
+    messagingSenderId: "476357131636",
+    appId: "1:476357131636:web:6d3642cafe49c6114cc021"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
 </body>
 </html>
+
 
 
